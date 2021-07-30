@@ -49,57 +49,126 @@
 //     e.target.classList.toggle('btn-active');
 // }
 
-const colors = [
-    {hex: '#f44336', rgb: '244,67,54'},
-    {hex: '#009620', rgb: '200, 182, 5'},
-    {hex: '#000688', rgb: '100, 275, 100'},
-    {hex: '#009688', rgb: '55, 25, 59'},
-    {hex: '#000000', rgb: '235, 23, 200'},
-    {hex: '#f77688', rgb: '127, 158, 0'},
-    {hex: '#007588', rgb: '24, 235, 174'},
-];
+// const colors = [
+//     {hex: '#f44336', rgb: '244,67,54'},
+//     {hex: '#009620', rgb: '200, 182, 5'},
+//     {hex: '#000688', rgb: '100, 275, 100'},
+//     {hex: '#009688', rgb: '55, 25, 59'},
+//     {hex: '#000000', rgb: '235, 23, 200'},
+//     {hex: '#f77688', rgb: '127, 158, 0'},
+//     {hex: '#007588', rgb: '24, 235, 174'},
+// ];
 
-function createCardColor(colors) {
-   return colors.map(color => {
-        return`
-        <div class="color-card">
-        <div 
-        class="color-swatch" 
-        data-hex="${color.hex}"
-        data-rgb="${color.rgb}"
-        style="background-color: ${color.hex}"
-        ></div>
-        <div class="color-meta">
-            <p>HEX: ${color.hex}</p>
-            <p>RGB: ${color.rgb}</p>
-        </div>
-        </div>
-        `;
-    }).join('');
-};
+// function createCardColor(colors) {
+//    return colors.map(color => {
+//         return`
+//         <div class="color-card">
+//         <div 
+//         class="color-swatch" 
+//         data-hex="${color.hex}"
+//         data-rgb="${color.rgb}"
+//         style="background-color: ${color.hex}"
+//         ></div>
+//         <div class="color-meta">
+//             <p>HEX: ${color.hex}</p>
+//             <p>RGB: ${color.rgb}</p>
+//         </div>
+//         </div>
+//         `;
+//     }).join('');
+// };
 
-const allCardsColor = createCardColor(colors);
+// const allCardsColor = createCardColor(colors);
 
-const boxEl = document.querySelector('.js-palette');
+// const boxEl = document.querySelector('.js-palette');
 
-boxEl.insertAdjacentHTML('beforeend', allCardsColor);
+// boxEl.insertAdjacentHTML('beforeend', allCardsColor);
 
-//const colorSwatchEl = document.querySelector('.color-swatch');
-boxEl.addEventListener('click', (e) => {
+// //const colorSwatchEl = document.querySelector('.color-swatch');
+// boxEl.addEventListener('click', (e) => {
     
-    if(!e.target.classList.contains('color-swatch')) {
-        return;
-    }
+//     if(!e.target.classList.contains('color-swatch')) {
+//         return;
+//     }
 
-    const isActive = document.querySelector('.color-card.is-active');
+//     const isActive = document.querySelector('.color-card.is-active');
 
-    if(isActive) {
-        isActive.classList.remove('is-active');
-    }
+//     if(isActive) {
+//         isActive.classList.remove('is-active');
+//     }
 
-    e.target.classList.add('is-active');
+//     e.target.classList.add('is-active');
 
-    document.body.style.backgroundColor = e.target.dataset.hex;
-})
+//     document.body.style.backgroundColor = e.target.dataset.hex;
+// })
+
+// const tech = [
+//     {label: "HTML"},
+//     {label: "CSS"},
+//     {label: "JavaScript"},
+//     {label: "React"},
+//     {label: "Redux"},
+//     {label: "Node.js"},
+//     {label: "Vue"},
+//     {label: "MongoDB"},
+//     {label: "Mobx"},
+// ];
+
+// const listEl = document.querySelector('.js-list');
+
+// const inputEl = document.querySelector(['#filter']);
+// inputEl.addEventListener('input', onFilterChange);
+
+// function renderAllList(tech) {
+//        return tech.map(val => `<li>${val.label}</li>`).join('');
+//     };
+    
+// const labelValue = renderAllList(tech);
+
+// listEl.innerHTML = labelValue;
+
+// function onFilterChange (e) {
+//     const filter = e.target.value.toLowerCase();
+
+//     const filteredItem = tech.filter(v => 
+//         v.label.toLowerCase().includes(filter));
+
+//     const listItemsMarcup = renderAllList(filteredItem);
+
+//     listEl.innerHTML = listItemsMarcup;
+// };
 
 
+// const tech = [
+//     {label: "HTML"},
+//     {label: "CSS"},
+//     {label: "JavaScript"},
+//     {label: "React"},
+//     {label: "Redux"},
+//     {label: "Node.js"},
+//     {label: "Vue"},
+//     {label: "MongoDB"},
+//     {label: "Mobx"},
+// ];
+
+// const inputEl = document.querySelector(['#filter']);
+// const listEl = document.querySelector(['.js-list']);
+
+// inputEl.addEventListener('input', callback);
+
+// function renderList(tech) {
+//     return tech.map(element => `<li>${element.label}</li>`).join('');
+// };
+
+// listEl.innerHTML = renderList(tech);
+
+// function callback(e) {
+//     const listValue = e.target.value.toLowerCase();
+
+//     const filterElements = tech.filter(val => val.label.toLowerCase().includes(listValue));
+    
+//     listEl.innerHTML = renderList(filterElements);
+// } 
+
+
+//console.log(listEl)
